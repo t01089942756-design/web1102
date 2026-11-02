@@ -11,6 +11,15 @@
       //선택한 리스트의 위치의 값으로 img 태그의 src 속성을 변경해라
     }
   </script>
+     <script>
+    function drawImage2()
+    {
+      let sel = document.getElementById('foods'); //선택리스트 id
+      let img = document.getElementById('foodimg'); //이미지를 바꿀이미지 id
+      img.src = sel.options[sel.selectedIndex].value;
+      //선택한 리스트의 위치의 값으로 img 태그의 src 속성을 변경해라
+    }
+  </script>
   </head>
   <body>
     주제1. 내가 좋아하는 과일 선택 <br>
@@ -23,5 +32,15 @@
       <img id = 'fimg' src='banana.png' alt='설명문' width=100 height=100>
     </form>
     주제2. 오늘 점심 메뉴 선택 <br>
+    <form>
+      <select id='foods' onchange='drawImage2()'>
+        <option value='mandu.png'> 만두 </option>
+        <option value='kimchi.png' selected> 김치 </option>
+        <option value='chicken.png'> 치킨 </option>
+        <option value='pizza.png'> 피자 </option>
+        <option value='pasta.png'> 파스타 </option>
+      </select>
+      <img id = 'foodimg' src='chicken.png' alt='설명문' width=100 height=100>
+    </form>
   </body>
 </html>
