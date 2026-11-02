@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head><title>page3</title></head>
+    <script>
+        function whatkeydown(e)
+        {
+            let str = ""; let div = document.getElementById("div");
+            div.innerHTML = "";
+            str+="e.key = " + e.key + "<br>";
+            str+="e.code = " + e.code + "<br>";
+            div.innerHTML = str;
+        }
+    </script>
+    <body>
+        키 리스너와 키 이벤트 속성 출력하기 <br>
+        <hr>
+        텍스트 창에 키를 눌러보세요. Alt,Shift,Ctrl 키도 가능 <br>
+        <input type="text" id="text" onkeydown="whatkeydown(event)">
+        <div id="div" style="background-color: aquamarine;
+        width: 250px; height: auto;"></div>
+    </body>
+</html>
 
