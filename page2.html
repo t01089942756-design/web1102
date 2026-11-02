@@ -20,6 +20,15 @@
       //선택한 리스트의 위치의 값으로 img 태그의 src 속성을 변경해라
     }
   </script>
+     <script>
+    function drawImage3()
+    {
+      let sel = document.getElementById('tripss'); //선택리스트 id
+      let img = document.getElementById('tripimg'); //이미지를 바꿀이미지 id
+      img.src = sel.options[sel.selectedIndex].value;
+      //선택한 리스트의 위치의 값으로 img 태그의 src 속성을 변경해라
+    }
+  </script>
   </head>
   <body>
     주제1. 내가 좋아하는 과일 선택 <br>
@@ -41,6 +50,15 @@
         <option value='pasta.png'> 파스타 </option>
       </select>
       <img id = 'foodimg' src='chicken.png' alt='설명문' width=100 height=100>
+    </form>
+    주제2. 20대 버킷리스트 <br>
+    <form>
+      <select id='trips' onchange='drawImage3()'>
+        <option value='japan.png'> 일본 여행 가기 </option>
+        <option value='china.png' selected> 중국 여행 가기 </option>
+        <option value='jeju.png'> 제주도 여행 가기 </option>
+      </select>
+      <img id = 'tripimg' src='china.png' alt='설명문' width=100 height=100>
     </form>
   </body>
 </html>
