@@ -1,16 +1,26 @@
 <!Doctype html>
 <html>
   <meta charset= 'utf-8'>
-  <head><title>리스트에서 자료 선택하기</title></head>
+  <head><title>리스트에서 자료 선택하기</title>
+  <script>
+    function drawImage()
+    {
+      let sel = document.getElementById('fruits'); //선택리스트 id
+      let img = document.getElementById('fimg'); //이미지를 바꿀이미지 id
+      img.src = set.options[sel.selectedIndex].value;
+      //선택한 리스트의 위치의 값으로 img 태그의 src 속성을 변경해라
+    }
+  </script>
+  </head>
   <body>
     주제1. 내가 좋아하는 과일 선택 <br>
     <form>
       <select id='fruits' onchange='drawImage()'>
         <option value='canva-sliced-orange-fruit-MAGenTx8ZW0.webp'> 오렌지 </option>
-        <option value='premium_photo-1671379041175-782d15092945.avif'> 모둠과일 </option>
+        <option value='premium_photo-1671379041175-782d15092945.avif' selected> 모둠과일 </option>
         <option value='석류_본문.jpg'> 석류 </option>
       </select>
-      <img id = 'fmig' src='premium_photo-1671379041175-782d15092945.avif' alt='설명문' width=100 height=100>
+      <img id = 'fimg' src='premium_photo-1671379041175-782d15092945.avif' alt='설명문' width=100 height=100>
     </form>
     주제2. 오늘 점심 메뉴 선택 <br>
   </body>
